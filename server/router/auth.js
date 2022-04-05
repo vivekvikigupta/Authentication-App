@@ -123,7 +123,7 @@ router.post('/signin', async (req, res)=>{
 
 
 //route to about page
-router.get('/about',authenticate, (req, res) => {
+router.get('/profile',authenticate, (req, res) => {
     console.log('Hello from about') 
     res.send(req.rootUser)
              

@@ -24,10 +24,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/contact', (req, res) => {
+// app.get('/contact', (req, res) => {
     
-    res.send('Hello from contact')
-  })
+//     res.send('Hello from contact')
+//   })
 
 // app.get('/about', (req, res) => {
 //   console.log("HEllo about middle")

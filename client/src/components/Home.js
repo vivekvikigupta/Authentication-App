@@ -41,7 +41,7 @@ const Home = () => {
     //for home welcome page
     <div className='p-5 container'>
       <div className='home-container'>
-        <h1>Welcome, {userData.name}</h1>
+        <h1>Welcome {userData.name}</h1>
       </div>
       <div className='para'>
         <h4>Good to see you again!</h4>

@@ -7,9 +7,9 @@ const About = () => {
   const navigate = useNavigate()
   const [userData, setUserData] = useState('');
 
-  const callAboutPage = async ()=>{
+  const callProfilePage = async ()=>{
     try{
-      const res = await fetch('/about', {
+      const res = await fetch('/profile', {
         method: "GET",
         headers:{
           Accept: "application/json",
@@ -42,7 +42,7 @@ const About = () => {
 
   useEffect(() => {
     //can't use async function in useEffect
-    callAboutPage()
+    callProfilePage()
   
   }, [])
 
