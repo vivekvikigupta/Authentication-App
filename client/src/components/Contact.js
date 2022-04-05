@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react'
+import {useNavigate} from 'react-router-dom'
+
 
 const Contact = () => {
+
+  const navigate = useNavigate()
 
   const [userData, setUserData] = useState('');
 
@@ -17,11 +21,17 @@ const Contact = () => {
       console.log(data)
       setUserData(data)
       
-      if(!res.status === 200){
-        const error = new Error(res.error);
+      if(res.status !== 200){
+        if(res.status === 401){
+          console.log(data.err)
+          window.alert("Please login first!")
+          navigate('/login')
+          
+        }else{
+        const error = new Error(res.error)
         throw error
+        }
       }
-    
     }catch(err){
       console.log(err)
     }
